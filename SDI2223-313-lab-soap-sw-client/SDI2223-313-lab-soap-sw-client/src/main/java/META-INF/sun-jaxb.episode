@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+      
+    <!--
+
+Este archivo ha sido generado por Eclipse Implementation of JAXB v2.3.7 
+Visite https://eclipse-ee4j.github.io/jaxb-ri 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2023.04.26 a las 03:28:45 PM CEST 
+
+  -->
+      
+    <bindings xmlns:tns="http://uniovi.com/sdi/soap/ws" if-exists="true" scd="x-schema::tns">
+            
+        <schemaBindings map="false">
+                  
+            <package name="com.uniovi.sdi.wsdl"/>
+                
+        </schemaBindings>
+            
+        <bindings if-exists="true" scd="tns:getMarksRequest">
+                  
+            <class ref="com.uniovi.sdi.wsdl.GetMarksRequest"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="tns:getMarksResponse">
+                  
+            <class ref="com.uniovi.sdi.wsdl.GetMarksResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:user">
+                  
+            <class ref="com.uniovi.sdi.wsdl.User"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:mark">
+                  
+            <class ref="com.uniovi.sdi.wsdl.Mark"/>
+                
+        </bindings>
+          
+    </bindings>
+    
+</bindings>

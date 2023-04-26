@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SDILab11 - cliente SOAP</title>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<div class="container">
+    <h2>
+        Listado de notas de: <span th:text="${dni}">99999999K</span>
+    </h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Descripción</th>
+            <th>Puntuación</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="mark : ${markList}">
+            <td th:text="${mark.description}">asignatura</td>
+            <td th:text="${mark.score}">10</td>
+        </tr>
+        </tbody>
+    </table>
+    <div th:if="${#lists.isEmpty(markList)}">Lista de notas vacía</div>
+</div>
+</body>
+</html>
