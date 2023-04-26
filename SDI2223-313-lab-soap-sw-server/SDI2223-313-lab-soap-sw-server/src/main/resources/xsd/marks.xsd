@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://uniovi.com/sdi/soap/ws"
+           targetNamespace="http://uniovi.com/sdi/soap/ws"
+           elementFormDefault="qualified">
+    <xs:element name="getMarksRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="dni" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getMarksResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="user">
+        <xs:sequence>
+            <xs:element name="dni" type="xs:string"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="mark" type="tns:mark" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="mark">
+        <xs:sequence>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="score" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
